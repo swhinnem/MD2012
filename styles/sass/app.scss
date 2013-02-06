@@ -121,6 +121,8 @@ $img-dir: "#{$root-dir}images/";
 body {
 	background: $secondaryColor;
 	color: $txtColor;
+	min-width: 20em;
+	height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -128,29 +130,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* $home ------------------------------------------------------------------------------------------*/
+/* $navigation ------------------------------------------------------------------------------------------*/
 
-.photo {
-	background: url('#{$img-dir}photo_bg.jpg') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+a.menu-link {
+    float: right;
+    display: block;
+    padding: 1em;
+}
+nav[role=navigation] {
+	//clear: both;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+}
+nav[role=navigation].active {
+	max-height: 15em;
+}
+nav[role=navigation] ul {
+	//margin: 0;
+	//padding: 0;
+	//border-top: 1px solid #808080;
+}
+nav[role=navigation] li a {
+	display: block;
+	//padding: 0.8em;
+	//border-bottom: 1px solid #808080;
+}
+
+@media screen and (min-width: 30em) {
+	a.menu-link {
+	   display: none;
+	}
+	.js nav[role=navigation] {
+		max-height: none;
+	}
+	nav[role=navigation] ul {
+		margin: 0 0 0 -0.25em;
+		border: 0;
+	}
 	
-	h2 {
-	font-size: 80px;
+	nav[role=navigation]  li {
+		display: inline-block;
+		margin: 0 0.25em;
+	}
+	nav[role=navigation] li a {
+		border: 0;
 	}
 }
 
 .nav {
-	height: 100px;
+	min-height: 100px;
 	overflow: hidden;
+
+	nav {
+		float: right;
+	}
 	
 	h1 {
-		@include hide-text;
+		//@include hide-text;
+		font-size: 200%;
 		color: #900;
-		width: 100px;
-		height: 100px;
+		//width: 100px;
+		//height: 100px;
 		float: left;
 	}
 
@@ -167,4 +214,17 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	
 }
+
+
+/* $home ------------------------------------------------------------------------------------------*/
+
+.photo {
+	height: 33%;
+	
+	h2 {
+	font-size: 80px;
+	}
+}
+
+
 	

@@ -16,12 +16,27 @@
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="styles/css/app.css">
 
-	<script src="js/foundation/modernizr.foundation.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script type="text/javascript">//<![CDATA[
+		$(document).ready(function() {
+			$(".photo").backstretch("images/photo_bg.jpg");
+
+			$('body').addClass('js');
+			var $menu = $('#menu'),
+		    $menulink = $('.menu-link');
+			  
+			$menulink.click(function() {
+			  $menulink.toggleClass('active');
+			  $menu.toggleClass('active');
+			  return false;
+			});
+		});
+	//]]></script>
 
 </head>
 <body>
@@ -30,17 +45,19 @@
 		<div class="six columns">
 			<h2>Welcome!</h2>
 			<p>By day, I'm a graphic designer for a New York City based investing startup, Betterment. I'm tasked with creating a brand that is clean, simple, and beautiful (everything your average financial institution is not!). By night, I write for my own site, curate all things geek, design cool stuff, and make a mean margarita. I'm inspired by awesome typography, gorgeous illustrations, and kick ass tattoos.</p>
-<!--			<i class="foundicon-thumb-up"></i>-->
 		</div>
 	</div>
 	
 	<div class="row nav">
 		<h1>Madyson Designs</h1>
-		<ul>
-			<li>About Me</li>
-			<li>Portfolio</li>
-			<li>Blog</li>
-		</ul>
+		<a href="#menu" class="menu-link">Menu</a>
+		<nav id="menu" role="navigation">
+			<ul>
+				<li><a href="#">About Me</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+		</nav>
 	</div>
 	
 	<div class="row portfolio">
@@ -62,7 +79,8 @@
 	</div>
 	
 	<!-- Included JS Files (Uncompressed) -->
-	<script src="js/foundation/jquery.js"></script>
+
+	<script src="js/foundation/modernizr.foundation.js"></script>
 	
 	<script src="js/foundation/jquery.foundation.accordion.js"></script>
 	
@@ -88,6 +106,7 @@
 	
 	
   <!-- Application Javascript, safe to override -->
-  <script src="javascripts/foundation/app.js"></script>
+  <script src="js/foundation/app.js"></script>
+  <script src="js/jquery.backstretch.min.js"></script>
 </body>
 </html>
