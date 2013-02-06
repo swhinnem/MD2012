@@ -6145,11 +6145,10 @@ nav[role=navigation] li a {
 }
 /* line 195, ../sass/app.scss */
 .nav h1 {
-  font-size: 200%;
   color: #900;
   float: left;
 }
-/* line 204, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 .nav ul {
   list-style-type: none;
   padding: 0;
@@ -6167,7 +6166,7 @@ nav[role=navigation] li a {
 .nav ul > li:last-child {
   margin-right: 0px;
 }
-/* line 209, ../sass/app.scss */
+/* line 208, ../sass/app.scss */
 .nav ul li {
   height: 100%;
   margin: 30px;
@@ -6175,11 +6174,11 @@ nav[role=navigation] li a {
 }
 
 /* $home ------------------------------------------------------------------------------------------*/
-/* line 221, ../sass/app.scss */
+/* line 220, ../sass/app.scss */
 .photo {
   height: 33%;
 }
-/* line 224, ../sass/app.scss */
+/* line 223, ../sass/app.scss */
 .photo h2 {
   font-size: 80px;
 }
